@@ -1,0 +1,34 @@
+@import '../../../contents/scss/vars.scss';
+
+.navbar {
+  position: sticky;
+  top: 0;
+  &__bg-color {
+    background-color: #1a7eff;
+  }
+  &__directory {
+    position: absolute;
+    top: calc(100% + 1rem);
+    z-index: 4;
+    left: 115px;
+    &-item {
+      background-color: #1a7eff;
+      border-bottom: 1px solid #0052bd;
+      &:hover {
+        background-color: #60a4fc;
+        cursor: pointer;
+      }
+      &-content {
+        font-size: $fs_default;
+        color: $navbar_directory_item_color;
+        &::before {
+          content: '\203A';
+          position: absolute;
+          top: -6px;
+          left: -15px;
+          font-size: $fs_default + 5px;
+        }
+      }
+    }
+  }
+}

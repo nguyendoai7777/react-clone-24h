@@ -1,0 +1,28 @@
+@import '../../../contents//scss/vars.scss';
+//
+.mn-btn {
+  width: fit-content;
+  margin-right: 3px;
+  border-radius: 3px;
+  font-size: $fs_default - 5px;
+  &:hover {
+    text-decoration: none;
+  }
+  &__main {
+    background-color: #0b41f3;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 89%;
+      right: 44%;
+      transform: rotate(45deg);
+      width: 5px;
+      height: 5px;
+      background-color: #0b41f3;
+    }
+  }
+  &__nav {
+    background-color: #dedede;
+  }
+}

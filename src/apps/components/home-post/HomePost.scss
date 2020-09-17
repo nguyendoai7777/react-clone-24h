@@ -1,0 +1,54 @@
+@import '../../../contents/scss/vars.scss';
+
+@mixin g_font-size {
+  font-size: $fs_default - 2px;
+  line-height: $fs_default + 2px;
+}
+
+.bl {
+  &__img {
+    height: 90px;
+  }
+  &__body {
+    &-content {
+      @include g_font-size;
+    }
+    &-nav {
+      position: relative;
+      color: #777;
+      font-size: $fs_default - 4px;
+      line-height: $fs_default + 2px;
+      &::before {
+        content: '\00BB';
+        font-size: 20px;
+        color: #0b41f3;
+        position: absolute;
+        top: -4px;
+        left: 0;
+      }
+    }
+  }
+  &__post-botnav {
+    a {
+      transition: .15s ease-in-out;
+      color: #000;
+      position: relative;
+      font-size: $fs_default - 3px;
+      &::after {
+        content: '\2925	';
+        font-size: $fs_default + 3px;
+        color: #000;
+        position: absolute;
+        top: -7px;
+        left: -15px;
+      }
+      &:hover {
+        color: #34aaff;
+        text-decoration: none;
+        &::after {
+          color: #34aaff;
+        }
+      }
+    }
+  }
+}
