@@ -1,0 +1,14 @@
+@import '../../../contents/scss//vars.scss';
+
+.title-decotation {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  &__icon {
+    padding-right: 10px;
+    height: 20px;
+  }
+  &__content {
+    font-size: $fs_default +  5px;
+    font-weight: bold;
+  }
+}

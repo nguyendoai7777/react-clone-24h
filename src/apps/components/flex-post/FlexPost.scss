@@ -1,0 +1,7 @@
+@import '../../../contents/scss/vars.scss';
+
+.flex-post {
+  &__content {
+    font-size: $fs_default - 3px;
+  }
+}

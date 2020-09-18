@@ -36,10 +36,10 @@
       font-size: $fs_default - 3px;
       &::after {
         content: '\2925	';
-        font-size: $fs_default + 3px;
+        font-size: $fs_default - 3px;
         color: #000;
         position: absolute;
-        top: -7px;
+        top: -2px;
         left: -15px;
       }
       &:hover {

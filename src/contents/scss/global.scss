@@ -30,3 +30,11 @@ code {
   visibility: hidden;
   opacity: 0;
 }
+
+.default-link {
+  color: #000;
+  &:hover {
+    color: #34aaff;
+    text-decoration: none;
+  }
+}

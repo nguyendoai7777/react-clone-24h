@@ -2,14 +2,20 @@ import React from 'react';
 import ButtonNav from '../../entities/button-nav/ButtonNav';
 import './HomePost.scss';
 
-import iconNav from '../../../contents/icons/navlink-small-icon.png';
+import { smallNav, preNav } from './HomePost.constant';
 
 export default function HomePost() {
   return (
     <div className='home__block-post'>
       <div className='d-flex'>
-        <ButtonNav type={false} content={'ahias'} />
-        <ButtonNav type={true} content={'ahias'} />
+        {smallNav.map((item) => (
+          <ButtonNav
+            type={item.type}
+            content={item.title}
+            key={item.id}
+            href={item.href}
+          />
+        ))}
       </div>
       <div className='block__post-title'></div>
       <div className='d-flex mt-2'>
@@ -29,18 +35,11 @@ export default function HomePost() {
           </a>
         </div>
       </div>
-      <div className='bl__post-botnav pl-3'>
-        <a href='/'>Kỳ họp Quốc hội tháng 10 có nội dung liên quan Bộ...</a>
-      </div>
-      <div className='bl__post-botnav pl-3'>
-        <a href='/'>Kỳ họp Quốc hội tháng 10 có nội dung liên quan Bộ...</a>
-      </div>
-      <div className='bl__post-botnav pl-3'>
-        <a href='/'>Kỳ họp Quốc hội tháng 10 có nội dung liên quan Bộ...</a>
-      </div>
-      <div className='bl__post-botnav pl-3'>
-        <a href='/'>Kỳ họp Quốc hội tháng 10 có nội dung liên quan Bộ...</a>
-      </div>
+      {preNav.map((item) => (
+        <div className='bl__post-botnav pl-3' key={item.id}>
+          <a href={item.href}>{item.title}</a>
+        </div>
+      ))}
     </div>
   );
 }
